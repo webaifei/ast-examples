@@ -1,0 +1,29 @@
+{
+  "name": "ast",
+  "version": "1.0.0",
+  "description": "ast examples",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webaifei/ast-examples.git"
+  },
+  "keywords": [
+    "ast",
+    "examples"
+  ],
+  "author": "zhangaifei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webaifei/ast-examples/issues"
+  },
+  "homepage": "https://github.com/webaifei/ast-examples#readme",
+  "dependencies": {
+    "esprima-fb": "^15001.1001.0-dev-harmony-fb"
+  }
+}

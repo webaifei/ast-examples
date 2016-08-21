@@ -4,7 +4,7 @@
 
 
 ## 能做什么？
-> 抽象语法树的用处非常多，比如我们常见的代码压缩（之前我天真的以为代码压缩应该就是正则匹配替换掉换行和空格，再一次使用uglifyjs压缩代码测试的时候，发现一个没有用到的函数声明在压缩后的代码中彻底没找到！！），IDE的代码提示，错误提示，编译器等等。
+> 抽象语法树的用处非常多，比如我们常见的代码压缩（之前我天真的以为代码压缩应该就是正则匹配替换掉换行和空格，在一次使用uglifyjs压缩代码测试的时候，发现一个没有用到的函数声明在压缩后的代码中彻底没找到！！），IDE的代码提示，错误提示，编译器等等。
 
 就拿上面的我遇到的问题来说，它是怎么实现的检测到我定义了这个函数，但是没有使用呢。其实内部原来就是把整个代码解析成一棵树，包含了各种类型的节点，类似于我们熟悉的dom树（这点来看，其实很多技术的思想都是相通的）
 
@@ -19,7 +19,7 @@
           "type": "FunctionDeclaration",
           "id": {
               "type": "Identifier",
-              "name": "sau"
+              "name": "sau"//函数名
           },
           "params": [],
           "defaults": [],
@@ -49,12 +49,12 @@
           "expression": false
       },
       {
-          "type": "ExpressionStatement",
+          "type": "ExpressionStatement",//节点类型
           "expression": {
               "type": "CallExpression",
               "callee": {
                   "type": "Identifier",
-                  "name": "sau"
+                  "name": "sau"//调用的函数名
               },
               "arguments": []
           }
@@ -100,10 +100,14 @@
 1. js => ast
 2. 遍历ast 修改
 3. ast => js
+
 ## 如何把js解析成语法树
 这里，个人能力的缘故还不到去关注js＝>ast转换的实现细节的时候，我们只要能实现就行，比较流行的有两个库：
 1. [esprima](http://esprima.org/demo/parse.html) 把js转换成ast
 2. [esprima-fb 来自facebook,基于esprima](https://github.com/facebookarchive/esprima) 兼容jsx js|jsx => ast
+
+demos: esprima-fb/
+1. js2ast.js => js解析成ast
 
 ## 遍历ast树
 1. [estraverse](https://github.com/estools/estraverse)
