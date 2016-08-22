@@ -9,12 +9,9 @@ const utils = require('../../utils/');
 const walk = require('esprima-walk');
 
 var _path = process.argv.slice(2)[0];
-var asFilePath = path.join(__dirname, _path);
+var asFilePath = path.resolve(__dirname, _path);
 
-var options = {
-
-}
-var tree = utils.read(asFilePath, options)
+var tree = utils.read(asFilePath)
 // 修改var声明的变量 => const
 // 变量值＋1
 walk(tree, function (node){
@@ -27,8 +24,4 @@ walk(tree, function (node){
   }
 })
 
-var code =codegenJsx.generate(tree);
-
-
-//写入新代码
-fs.writeFileSync(asFilePath,code, 'utf8')
+utils.write(asFilePath, tree)

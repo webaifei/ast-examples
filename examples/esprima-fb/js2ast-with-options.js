@@ -12,12 +12,16 @@ var options = {
   //1. 添加注释comments属性
   //2. 自动开启range属性 标志位置信息
   attachComment: false,
+  // attachComment的别名
+  // comment: true,
   // range会包含各个节点的位置信息 （start, end）
   range: false,
   // js的类型 是es6模块 还是script
   sourceType: 'module',
   // 通过行列的形式 标志节点的位置信息
-  loc: false
+  loc: false,
+  // 增加tokens属性 具体干啥 现在不知道？？
+  tokens: true
 }
 var code = fs.readFileSync(filePath);
 var tree = esprimaFb.parse(code, options);
