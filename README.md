@@ -1,6 +1,6 @@
 ## AST （abstract syntax tree）
 > 官方描述： 是源代码的抽象语法结构的树状表现形式
-简单的来说，
+简单的来说，就是js代码的map描述（普通的js对象）
 
 
 ## 能做什么？
@@ -107,14 +107,23 @@
 2. [esprima-fb 来自facebook,基于esprima](https://github.com/facebookarchive/esprima) 兼容jsx js|jsx => ast
 
 demos: esprima-fb/
+
 1. js2ast.js => js解析成ast
+2. js2ast-with-options.js 通过配置不同的解析参数 ［在线查看不同配置参数的解析结果］(http://esprima.org/demo/parse.html)
 
 ## 遍历ast树
 1. [estraverse](https://github.com/estools/estraverse)
 2. [esprima-walk](https://github.com/jrajav/esprima-walk)
 
-## 操作ast树
+demos: esprima-walk
+1. walk.js
 
+
+## 操作ast树
+1. 生成的抽象语法树 是一个js对象 所以对树的操作 就和修改普通的js对象一样
+
+demos: escodegen-wallaby/
+1. gen.js 修改tree属性 重新生成js代码 保存
 
 ## ast转换成js
 1. [escodegen](https://github.com/estools/escodegen)

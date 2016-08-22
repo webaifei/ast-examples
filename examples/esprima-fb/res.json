@@ -1,0 +1,247 @@
+/*
+没有解析注释的结果
+ */
+
+{
+  "type": "Program",
+  "body": [{
+    "type": "VariableDeclaration",
+    "declarations": [{
+      "type": "VariableDeclarator",
+      "id": {
+        "type": "Identifier",
+        "name": "name"
+      },
+      "init": {
+        "type": "Literal",
+        "value": "ngnice",
+        "raw": "'ngnice'"
+      }
+    }],
+    "kind": "var"
+  }, {
+    "type": "FunctionDeclaration",
+    "id": {
+      "type": "Identifier",
+      "name": "say"
+    },
+    "params": [],
+    "defaults": [],
+    "body": {
+      "type": "BlockStatement",
+      "body": [{
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "Identifier",
+              "name": "console"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "log"
+            }
+          },
+          "arguments": [{
+            "type": "Identifier",
+            "name": "name"
+          }]
+        }
+      }]
+    },
+    "rest": null,
+    "generator": false,
+    "expression": false
+  }]
+}
+/*解析了注释的结构*/
+{
+  "type": "Program",
+  "body": [{
+    "type": "VariableDeclaration",
+    "declarations": [{
+      "type": "VariableDeclarator",
+      "id": {
+        "type": "Identifier",
+        "name": "name",
+        "range": [11, 15]
+      },
+      "init": {
+        "type": "Literal",
+        "value": "ngnice",
+        "raw": "'ngnice'",
+        "range": [18, 26]
+      },
+      "range": [11, 26]
+    }],
+    "kind": "var",
+    "range": [7, 27],
+    "leadingComments": [{
+      "type": "Line",
+      "value": "name",
+      "range": [0, 6]
+    }],
+    "trailingComments": [{
+      "type": "Line",
+      "value": " 函数定义",
+      "range": [28, 35]
+    }]
+  }, {
+    "type": "FunctionDeclaration",
+    "id": {
+      "type": "Identifier",
+      "name": "say",
+      "range": [45, 48],
+      "leadingComments": [{
+        "type": "Line",
+        "value": " 函数定义",
+        "range": [28, 35]
+      }]
+    },
+    "params": [],
+    "defaults": [],
+    "body": {
+      "type": "BlockStatement",
+      "body": [{
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "Identifier",
+              "name": "console",
+              "range": [54, 61]
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "log",
+              "range": [62, 65]
+            },
+            "range": [54, 65]
+          },
+          "arguments": [{
+            "type": "Identifier",
+            "name": "name",
+            "range": [66, 70]
+          }],
+          "range": [54, 71]
+        },
+        "range": [54, 71]
+      }],
+      "range": [50, 73]
+    },
+    "rest": null,
+    "generator": false,
+    "expression": false,
+    "range": [36, 73]
+  }],
+  "range": [7, 73],
+  "comments": [{
+    "type": "Line",
+    "value": "name",
+    "range": [0, 6]
+  }, {
+    "type": "Line",
+    "value": " 函数定义",
+    "range": [28, 35]
+  }]
+}
+/*开启range和attachComment的解析结果*/
+{
+  "type": "Program",
+  "body": [{
+    "type": "VariableDeclaration",
+    "declarations": [{
+      "type": "VariableDeclarator",
+      "id": {
+        "type": "Identifier",
+        "name": "name",
+        "range": [11, 15]
+      },
+      "init": {
+        "type": "Literal",
+        "value": "ngnice",
+        "raw": "'ngnice'",
+        "range": [18, 26]
+      },
+      "range": [11, 26]
+    }],
+    "kind": "var",
+    "range": [7, 27],
+    "leadingComments": [{
+      "type": "Line",
+      "value": "name",
+      "range": [0, 6]
+    }],
+    "trailingComments": [{
+      "type": "Line",
+      "value": " 函数定义",
+      "range": [28, 35]
+    }]
+  }, {
+    "type": "FunctionDeclaration",
+    "id": {
+      "type": "Identifier",
+      "name": "say",
+      "range": [45, 48],
+      "leadingComments": [{
+        "type": "Line",
+        "value": " 函数定义",
+        "range": [28, 35]
+      }]
+    },
+    "params": [],
+    "defaults": [],
+    "body": {
+      "type": "BlockStatement",
+      "body": [{
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "CallExpression",
+          "callee": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "Identifier",
+              "name": "console",
+              "range": [54, 61]
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "log",
+              "range": [62, 65]
+            },
+            "range": [54, 65]
+          },
+          "arguments": [{
+            "type": "Identifier",
+            "name": "name",
+            "range": [66, 70]
+          }],
+          "range": [54, 71]
+        },
+        "range": [54, 71]
+      }],
+      "range": [50, 73]
+    },
+    "rest": null,
+    "generator": false,
+    "expression": false,
+    "range": [36, 73]
+  }],
+  "range": [7, 73],
+  "comments": [{
+    "type": "Line",
+    "value": "name",
+    "range": [0, 6]
+  }, {
+    "type": "Line",
+    "value": " 函数定义",
+    "range": [28, 35]
+  }]
+}
